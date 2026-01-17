@@ -13,7 +13,9 @@
   --text-dark: #2C2C2C;
   --text-light: #666666;
   --white: #FFFFFF;
-  --background-light: #FAFAFA;
+  --background-light: #F5F0E8;
+  --background-beige: #E8DFD3;
+  --background-taupe: #D9CFC2;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-hover: rgba(0, 0, 0, 0.15);
 }

@@ -18,11 +18,15 @@
   align-items: center;
 }
 
-.logo h1 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin: 0;
-  font-weight: 600;
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-menu {

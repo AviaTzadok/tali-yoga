@@ -1,5 +1,24 @@
 .contact {
-  background-color: var(--white);
+  position: relative;
+  background-color: var(--background-light);
+  padding-top: 0;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: var(--background-light);
+  clip-path: ellipse(100% 100% at 50% 100%);
+  z-index: 0;
+}
+
+.contact .container {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-content {

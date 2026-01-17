@@ -1,0 +1,12 @@
+# Netlify configuration file
+# This file helps Netlify deploy your Angular app correctly
+
+[build]
+  command = "npm run build"
+  publish = "dist/tali-yoga"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

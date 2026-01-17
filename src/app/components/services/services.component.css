@@ -1,5 +1,36 @@
 .services {
-  background-color: var(--white);
+  position: relative;
+  background-color: var(--background-beige);
+  padding-top: 0;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: var(--background-beige);
+  clip-path: ellipse(100% 100% at 50% 100%);
+  z-index: 0;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: var(--background-taupe);
+  clip-path: ellipse(100% 100% at 50% 0%);
+  z-index: 0;
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
 }
 
 .services-grid {
@@ -16,7 +47,7 @@
   box-shadow: 0 4px 15px var(--shadow);
   transition: all 0.3s ease;
   text-align: center;
-  border-top: 4px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .service-card:hover {

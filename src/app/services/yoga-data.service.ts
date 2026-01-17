@@ -59,38 +59,86 @@ export class YogaDataService {
   private readonly galleryImages = signal<IGalleryImage[]>([
     {
       id: '1',
-      src: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
-      alt: 'יוגה בסטודיו',
+      src: 'assets/images/gallery/1000094639.jpg',
+      alt: 'סטודיו יוגה - תרגול קבוצתי',
       title: 'רגעים יפים מהסטודיו'
     },
     {
       id: '2',
-      src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
-      alt: 'תרגול יוגה',
+      src: 'assets/images/gallery/1000094654.jpg',
+      alt: 'סטודיו יוגה - חלל מרגיע',
       title: 'רגעים יפים מהסטודיו'
     },
     {
       id: '3',
-      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-      alt: 'יוגה קבוצתית',
+      src: 'assets/images/gallery/1000094656.jpg',
+      alt: 'תרגול יוגה - תנוחת איזון',
       title: 'רגעים יפים מהסטודיו'
     },
     {
       id: '4',
-      src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800',
-      alt: 'תנועה ויוגה',
+      src: 'assets/images/gallery/1000094683.jpg',
+      alt: 'תרגול יוגה - תנוחת גשר',
       title: 'רגעים יפים מהסטודיו'
     },
     {
       id: '5',
-      src: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
-      alt: 'יוגה בסטודיו',
+      src: 'assets/images/gallery/1000094704.jpg',
+      alt: 'תרגול יוגה - תנוחת איזון ידיים',
       title: 'רגעים יפים מהסטודיו'
     },
     {
       id: '6',
-      src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
-      alt: 'תרגול יוגה',
+      src: 'assets/images/gallery/IMG_1525.JPG',
+      alt: 'תרגול יוגה - כפיפה קדימה',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '7',
+      src: 'assets/images/gallery/IMG_1531.JPG',
+      alt: 'תרגול יוגה - תנוחה מתקדמת',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '8',
+      src: 'assets/images/gallery/IMG_1544.JPG',
+      alt: 'טלי - מדריכת יוגה',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '9',
+      src: 'assets/images/gallery/IMG_1576.JPG',
+      alt: 'תרגול יוגה - תנוחת גשר',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '10',
+      src: 'assets/images/gallery/IMG_1634.JPG',
+      alt: 'תרגול יוגה - תנוחת פלנק צד',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '11',
+      src: 'assets/images/gallery/DSC07342.jpeg',
+      alt: 'תרגול יוגה - רגעים יפים',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '12',
+      src: 'assets/images/gallery/ADCBFD14-9FC7-4019-A548-02F2068BE265.JPG',
+      alt: 'תרגול יוגה - רגעים יפים',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '13',
+      src: 'assets/images/gallery/2C1C068E-71C5-46D0-A064-BC64286B433A.JPG',
+      alt: 'תרגול יוגה - רגעים יפים',
+      title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '14',
+      src: 'assets/images/gallery/9C199668-9E14-430F-B252-0AA69C12E16B.JPG',
+      alt: 'תרגול יוגה - רגעים יפים',
       title: 'רגעים יפים מהסטודיו'
     }
   ]);

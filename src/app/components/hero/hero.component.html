@@ -1,14 +1,21 @@
-<section id="home" class="hero">
+<section id="home" class="hero" [style.background-image]="getBackgroundImage()" #heroSection>
+  <video #heroVideo class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/tali-endind.mov" type="video/quicktime">
+    <source src="assets/video/tali-endind.mov" type="video/mp4">
+  </video>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <h1 class="hero-title">Tali Yoga & Movement</h1>
+      <div class="hero-logo-title">
+        <img src="assets/logo/E833008A-0C20-4A88-8878-0D9CB8BC93BC.PNG" alt="Tali Yoga & Movement Logo" class="hero-logo">
+        <h1 class="hero-title">Tali Yoga & Movement</h1>
+      </div>
       <h2 class="hero-subtitle">סטודיו ליוגה ותנועה</h2>
       <p class="hero-description">
         כדי לתת לעוד נשים לטעום ולחוות את הטוב הזה ולחולל שינוי גופני ותודעתי בחייהן.
       </p>
-      <div class="hero-buttons">
-        <button class="btn btn-primary" (click)="scrollToContact()">בואי ותהיי חלק מהקסם</button>
+      <div class="hero-cta">
+        <h3 class="hero-label">בואי ותהיי חלק מהקסם</h3>
         <button class="btn btn-secondary" (click)="scrollToContact()">לשיעור ניסיון</button>
       </div>
     </div>
