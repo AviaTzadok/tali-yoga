@@ -16,18 +16,6 @@
   z-index: 0;
 }
 
-.services::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: var(--background-taupe);
-  clip-path: ellipse(100% 100% at 50% 0%);
-  z-index: 0;
-}
-
 .services .container {
   position: relative;
   z-index: 1;
