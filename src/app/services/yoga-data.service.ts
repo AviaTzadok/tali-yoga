@@ -56,7 +56,7 @@ export class YogaDataService {
     address: 'דרך ארץ 54, חריש'
   });
 
-  private readonly galleryImages = signal<IGalleryImage[]>([
+  private readonly galleryImages = signal<IGalleryImage[]>(this.shuffleArray([
     {
       id: '1',
       src: 'assets/images/gallery/1000094639.jpg',
@@ -140,8 +140,14 @@ export class YogaDataService {
       src: 'assets/images/gallery/9C199668-9E14-430F-B252-0AA69C12E16B.JPG',
       alt: 'תרגול יוגה - רגעים יפים',
       title: 'רגעים יפים מהסטודיו'
+    },
+    {
+      id: '15',
+      src: 'assets/images/gallery/C262F449-91A0-4DF8-A4D9-706AC549B205.JPG',
+      alt: 'תרגול יוגה - רגעים יפים',
+      title: 'רגעים יפים מהסטודיו'
     }
-  ]);
+  ]));
 
   getYogaClasses() {
     return this.yogaClasses.asReadonly();
@@ -153,6 +159,15 @@ export class YogaDataService {
 
   getGalleryImages() {
     return this.galleryImages.asReadonly();
+  }
+
+  private shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
   }
 }
 

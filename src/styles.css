@@ -16,6 +16,9 @@
   --background-light: #F5F0E8;
   --background-beige: #E8DFD3;
   --background-taupe: #D9CFC2;
+  --background-hex: #F8F6F3;
+  --input-bg: #F5E6D3;
+  --button-light: #E8DFD3;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-hover: rgba(0, 0, 0, 0.15);
 }
@@ -105,14 +108,17 @@ button {
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--button-light);
+  color: var(--text-dark);
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-hover);
 }
 
 @media (max-width: 768px) {

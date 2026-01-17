@@ -3,6 +3,9 @@
     <h2 class="section-title">יצירת קשר</h2>
     <div class="contact-content">
       <div class="contact-info">
+        <div class="contact-logo">
+          <img src="assets/logo/E833008A-0C20-4A88-8878-0D9CB8BC93BC.PNG" alt="Tali Yoga & Movement Logo">
+        </div>
         <h3>סטודיו ליוגה ותנועה</h3>
         <div class="info-item">
           <span class="info-icon">📞</span>
@@ -26,16 +29,29 @@
           </div>
         } @else {
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-            <div class="form-group">
-              <label for="name">שם מלא *</label>
-              <input 
-                type="text" 
-                id="name" 
-                formControlName="name"
-                [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-              @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-                <span class="error-message">{{ getFieldError('name') }}</span>
-              }
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">שם מלא *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  formControlName="name"
+                  [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                  <span class="error-message">{{ getFieldError('name') }}</span>
+                }
+              </div>
+              <div class="form-group">
+                <label for="phone">טלפון *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  formControlName="phone"
+                  [class.error]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+                @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
+                  <span class="error-message">{{ getFieldError('phone') }}</span>
+                }
+              </div>
             </div>
             <div class="form-group">
               <label for="email">אימייל *</label>
@@ -46,17 +62,6 @@
                 [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
               @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
                 <span class="error-message">{{ getFieldError('email') }}</span>
-              }
-            </div>
-            <div class="form-group">
-              <label for="phone">טלפון *</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                formControlName="phone"
-                [class.error]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
-              @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
-                <span class="error-message">{{ getFieldError('phone') }}</span>
               }
             </div>
             <div class="form-group">
@@ -80,6 +85,10 @@
                 שליחה
               }
             </button>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+              <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            </div>
           </form>
         }
       </div>
