@@ -1,0 +1,20 @@
+<section id="services" class="services section">
+  <div class="container">
+    <h2 class="section-title">השירותים שלנו</h2>
+    <div class="services-grid">
+      @for (yogaClass of yogaClasses(); track yogaClass.id) {
+        <div class="service-card">
+          <div class="service-icon">🧘</div>
+          <h3 class="service-title">{{ yogaClass.title }}</h3>
+          <p class="service-description">{{ yogaClass.description }}</p>
+        </div>
+      }
+    </div>
+    <div class="services-cta">
+      <h3>רוצה להתחיל שינוי בחייך?</h3>
+      <p>השאירי פרטים ואחזור אלייך.</p>
+      <button class="btn btn-primary" (click)="scrollToContact()">בואי ותהיי חלק מהקסם</button>
+    </div>
+  </div>
+</section>
+

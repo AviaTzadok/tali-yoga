@@ -1,0 +1,30 @@
+<section id="gallery" class="gallery section">
+  <div class="container">
+    <h2 class="section-title">רגעים יפים מהסטודיו</h2>
+    <div class="gallery-grid">
+      @for (image of galleryImages(); track image.id) {
+        <div class="gallery-item">
+          <img [src]="image.src" [alt]="image.alt" loading="lazy">
+          <div class="gallery-overlay">
+            <p>{{ image.title }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">סוגי אימונים</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">שנות ניסיון</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">400+</div>
+        <div class="stat-label">לקוחות מרוצים</div>
+      </div>
+    </div>
+  </div>
+</section>
+
