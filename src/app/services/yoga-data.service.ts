@@ -2,6 +2,7 @@ import { Injectable, signal } from '@angular/core';
 import { IYogaClass } from '../models/yoga-class.interface';
 import { IContactInfo } from '../models/contact.interface';
 import { IGalleryImage } from '../models/gallery-image.interface';
+import { IRecommendation } from '../models/recommendation.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -149,6 +150,74 @@ export class YogaDataService {
     }
   ]));
 
+  private readonly recommendations = signal<IRecommendation[]>([
+    {
+      id: '1',
+      message: 'רק להגיד שהשיעור שלך פשוט פצצה\nואני נהנית נורא!\nאת תותחית',
+      timestamp: '9:23'
+    },
+    {
+      id: '2',
+      message: 'ואני ממליצה עליך לכולם',
+      timestamp: '9:23'
+    },
+    {
+      id: '3',
+      message: 'שלום טלי,\nתודה על השיעור של היום 🙏\n❤️ אני באמת מרגישה שזכיתי בך\nבכל פעם מחדש את מזכירה לי כמה\nחשוב ונכון לתרגל יוגה.',
+      timestamp: '17:05'
+    },
+    {
+      id: '4',
+      message: 'שלום טלי,\nתודה רבה על הדרך שבה את מובילה אותי ליוגה.\nתודה על הסבלנות, ההקשבה,\nוההשראה שאת נותנת בכל שיעור.\nבזכותך אני מוצאת את עצמי נלהבת\nלבוא לכל שיעור מחדש.\nתודה רבה 🙏',
+      timestamp: '13:09'
+    },
+    {
+      id: '5',
+      message: 'וואי תודה על היום היה מתוק ממש כמו כל דבר שאת עושה ❤️\nבשנה הקשה הזאת הסטודיו שלך והתרגול ואת בעצמך עם הרגישות וההקשבה שלך הייתם ממש עוגן בשבילי\nהגעתי לפני שנה בערך והייתי מרוסקת! במצב קשה ממש...ולאט לאט אני משתקמת וזה ממש ממש בזכות המקום שלך\nהדבר היחיד שיש לי להגיד זה הסטודיו של טלי 💖',
+      timestamp: '13:07'
+    },
+    {
+      id: '6',
+      message: 'טלייי תודה על השיעור ❤️\nאני בימים מאוד לחוצים אז רציתי להגיד\nלך שהשיעור עשה לי טוב במיוחד, היו לי\nממש רגעי פז של נשימה, הרפייה\nורגיעה.\nתודה עלייך, ממש מרגישים את הנתינה\nשלך והאכפתיות בשיעורים ❤️',
+      timestamp: '22:06'
+    },
+    {
+      id: '7',
+      message: 'היי טלי.\nבוקר טוב.\nקודם כל אני רוצה להודות לך שוב מעומק הלב.\nפתחת לי עולם חדש, עולם היוגה, שתרם לי המון, גם פיזית ובמיוחד לנפש שלי.\nאני מאחלת לך שתמיד תמשיכי לגרום לאנשים לחזק את הגוף והנפש בצורה כל כך טובה.\nלצערי אני חייבת לבטל את המנוי מסיבות טובות, אכן, ואני מקווה לחזור להתאמן ולתרגל יוגה.\nהרבה הצלחה ובריאות.',
+      timestamp: '8:50'
+    },
+    {
+      id: '8',
+      message: 'תודה רבה על השיעור בבוקר',
+      timestamp: '12:20'
+    },
+    {
+      id: '9',
+      message: 'פשוט אני יוצאת מכל שיעור בתחושת ריפוי ענקית.. ממש ממש תודה לך',
+      timestamp: '12:21'
+    },
+    {
+      id: '10',
+      message: 'ממש מקום מדהים ואת מקצועית מאוד. שמחה כל כך שנרשמתי',
+      timestamp: '12:21'
+    },
+    {
+      id: '11',
+      message: 'שלום טלי,\nרציתי להודות לך מעומק הלב על השיעורים המדהימים וההדרכה המסורה שלך.\nתודה על תשומת הלב לפרטים הקטנים ועל הסבלנות הרבה שלך.\nאני מעריכה מאוד את ההשפעה החיובית שאת יוצרת.\nתודה רבה 🙏',
+      timestamp: '13:37'
+    },
+    {
+      id: '12',
+      message: 'היי אהובה\nאני בחופשת מחלה ולא יוצאת מהבית, לא רוצה לראות חברים או משפחה או לדבר עם אף אחד\nהסטודיו פשוט מציל אותי\nזה הדבר היחיד שאני עושה בשבוע הזה\nבזכותך מצליחה לנשום קצת יותר\nאין לך מושג איזה שליחות יש בך ואת עושה אותה מדויק\nתודה על המקום הקסום הזה מתנה ליקום. ❤️🙏',
+      timestamp: '16:11'
+    },
+    {
+      id: '13',
+      message: 'טלי היקרה,\nתודה על תרגול האגן ולב בערב יום כיפור.\nהתרגול השפיע לא רק על הלב אלא גם על הגוף.\nבמהלך התרגול כמעט בכיתי, הרגשתי הצפה רגשית בלי שום סיבה מוקדמת.\nהרגשתי שמשהו אחר קורה בגוף שלי.\nהמחזור שלי שהיה לא סדיר ואפילו נעלם כמה חודשים, חזר באופן מפתיע ביום כיפור, רק שבועיים אחרי המחזור הקודם.\nאני מייחסת את זה רק לתרגול.\nתודה על המקצועיות הייחודית שלך ועל הכוח המעניין שיש לך לשלוט בגוף, זה בהחלט עובד.\nתודה שזכיתי.',
+      timestamp: '12:46'
+    }
+  ]);
+
   getYogaClasses() {
     return this.yogaClasses.asReadonly();
   }
@@ -159,6 +228,10 @@ export class YogaDataService {
 
   getGalleryImages() {
     return this.galleryImages.asReadonly();
+  }
+
+  getRecommendations() {
+    return this.recommendations.asReadonly();
   }
 
   private shuffleArray<T>(array: T[]): T[] {

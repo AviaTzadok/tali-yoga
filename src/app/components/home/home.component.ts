@@ -6,6 +6,7 @@ import { AboutComponent } from '../about/about.component';
 import { ServicesComponent } from '../services/services.component';
 import { BookingComponent } from '../booking/booking.component';
 import { GalleryComponent } from '../gallery/gallery.component';
+import { RecommendationsComponent } from '../recommendations/recommendations.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { WhatsAppButtonComponent } from '../whatsapp-button/whatsapp-button.component';
@@ -21,6 +22,7 @@ import { WhatsAppButtonComponent } from '../whatsapp-button/whatsapp-button.comp
     ServicesComponent,
     BookingComponent,
     GalleryComponent,
+    RecommendationsComponent,
     ContactComponent,
     FooterComponent,
     WhatsAppButtonComponent
