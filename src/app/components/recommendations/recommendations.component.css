@@ -40,7 +40,7 @@
 
 .chat-wrapper {
   width: 100%;
-  max-width: 550px;
+  max-width: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,20 +60,21 @@
   position: relative;
   overflow: hidden;
   flex: 1;
+  max-width: 650px;
 }
 
 .chat-container > * {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .chat-bubble {
   background: #fff;
   border-radius: 12px;
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1.25rem;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   height: 330px;
   direction: rtl;
   text-align: right;
@@ -90,9 +91,9 @@
 }
 
 .message-text {
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.65;
-  color: #111b21;
+  color: #2c2c2c;
   margin: 0;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -100,6 +101,8 @@
   text-align: right;
   flex: 1;
   overflow: hidden;
+  font-family: 'Heebo', 'Arial', sans-serif;
+  font-weight: 400;
 }
 
 .message-timestamp {
